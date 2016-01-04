@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/album_art"
+            android:src="@drawable/kodaline"
+            android:clickable="true"
+            android:transitionName="albumArt" />
+
+        <RelativeLayout
+            android:background="#31576b"
+            android:layout_below="@id/album_art"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/cyan_panel"
+            android:paddingLeft="40dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Album title"
+                android:id="@+id/album_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/album_title"
+                android:layout_alignLeft="@id/album_title"
+                android:textAppearance="?android:attr/textAppearance"
+                android:text="Artist"
+                android:id="@+id/artist" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_circle"
+            android:src="@drawable/ic_pause_24dp"
+            android:id="@+id/fab"
+            android:transitionName="fab"
+            android:layout_above="@+id/cyan_panel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-30dp"
+            android:layout_marginRight="30dp" />
+
+        <LinearLayout
+            android:id="@+id/white_panel"
+            android:layout_below="@id/cyan_panel"
+            android:background="#eeeeee"
+            android:padding="10dp"
+            android:minHeight="80dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_volume_up_24dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/volume" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceInverse"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Track name"
+                android:id="@+id/track_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceInverse"
+                android:layout_marginRight="20dp"
+                android:text="4:20"
+                android:id="@+id/length" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

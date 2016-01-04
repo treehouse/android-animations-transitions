@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Album Cover</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_album_detail">AlbumDetail</string>
+</resources>
