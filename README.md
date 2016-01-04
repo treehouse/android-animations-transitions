@@ -1,2 +1,2 @@
-# android-animations-transitions
-Project files for the Treehouse Animations and Transitions course
+# Treehouse Android Animations and Transitions
+These are the full project files for the album cover app used in Treehouse's Animations and Transitions course.
