@@ -14,7 +14,7 @@
             android:layout_height="400dp"
             android:scaleType="centerCrop"
             android:id="@+id/album_art"
-            android:src="@drawable/kodaline"
+            android:src="@drawable/mean_something_kinder_than_wolves"
             android:clickable="true"
             android:transitionName="albumArt" />
 
@@ -22,7 +22,7 @@
             android:background="#31576b"
             android:layout_below="@id/album_art"
             android:layout_alignParentLeft="true"
-            android:id="@+id/cyan_panel"
+            android:id="@+id/title_panel"
             android:paddingLeft="40dp"
             android:paddingRight="20dp"
             android:paddingTop="20dp"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Album title"
+                android:text="Mean Something"
                 android:id="@+id/album_title" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_below="@id/album_title"
                 android:layout_alignLeft="@id/album_title"
                 android:textAppearance="?android:attr/textAppearance"
-                android:text="Artist"
+                android:text="Kinder Than Wolves"
                 android:id="@+id/artist" />
         </RelativeLayout>
 
@@ -54,15 +54,15 @@
             android:src="@drawable/ic_pause_24dp"
             android:id="@+id/fab"
             android:transitionName="fab"
-            android:layout_above="@+id/cyan_panel"
+            android:layout_above="@+id/title_panel"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="-30dp"
             android:layout_marginRight="30dp" />
 
         <LinearLayout
-            android:id="@+id/white_panel"
-            android:layout_below="@id/cyan_panel"
+            android:id="@+id/track_panel"
+            android:layout_below="@id/title_panel"
             android:background="#eeeeee"
             android:padding="10dp"
             android:minHeight="80dp"
@@ -81,10 +81,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceInverse"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Track name"
+                android:text="Make You Feel"
                 android:id="@+id/track_name" />
 
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceInverse"
                 android:layout_marginRight="20dp"
-                android:text="4:20"
+                android:text="4:26"
                 android:id="@+id/length" />
         </LinearLayout>
     </RelativeLayout>

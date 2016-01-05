@@ -58,12 +58,15 @@ public class AlbumListActivity extends Activity {
         StaggeredGridLayoutManager lm = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mAlbumList.setLayoutManager(lm);
 
-        final int[] albumArts = {R.drawable.christina,
-                R.drawable.ellie,
-                R.drawable.foster,
-                R.drawable.keane,
-                R.drawable.kodaline,
-                R.drawable.pinkrobots,};
+        final int[] albumArts = {
+                R.drawable.mean_something_kinder_than_wolves,
+                R.drawable.cylinders_chris_zabriskie,
+                R.drawable.broken_distance_sutro,
+                R.drawable.playing_with_scratches_ruckus_roboticus,
+                R.drawable.keep_it_together_guster,
+                R.drawable.the_carpenter_avett_brothers,
+                R.drawable.please_sondre_lerche,
+                R.drawable.direct_to_video_chris_zabriskie };
 
         RecyclerView.Adapter adapter = new RecyclerView.Adapter<AlbumVH>() {
             @Override

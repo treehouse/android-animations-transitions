@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     tools:context=".AlbumListActivity">
 
-    <!--<Toolbar-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:background="?attr/android:colorPrimary"-->
-        <!--/>-->
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/album_list"
         android:layout_width="match_parent"

@@ -32,4 +32,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.+'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.jimulabs.mirrorsandbox:mirror-sandbox:0.2.1'
+    compile 'com.android.support:palette-v7:23.1.1'
 }

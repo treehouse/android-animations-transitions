@@ -20,9 +20,9 @@ public class AlbumDetailBox extends MirrorSandboxBase {
     ImageView albumArtView;
     @Bind(R.id.fab)
     ImageButton fab;
-    @Bind(R.id.cyan_panel)
+    @Bind(R.id.title_panel)
     ViewGroup cyanPanel;
-    @Bind(R.id.white_panel)
+    @Bind(R.id.track_panel)
     ViewGroup whitePanel;
     @Bind(R.id.detail_container)
     ViewGroup detailContainer;

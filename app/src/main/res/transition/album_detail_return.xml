@@ -9,12 +9,12 @@
     <transitionSet android:transitionOrdering="sequential" android:startDelay="300">
         <transition class="com.teamtreehouse.albumcover.transition.Fold">
             <targets>
-                <target android:targetId="@id/white_panel" />
+                <target android:targetId="@id/track_panel" />
             </targets>
         </transition>
         <transition class="com.teamtreehouse.albumcover.transition.Fold">
             <targets>
-                <target android:targetId="@id/cyan_panel"/>
+                <target android:targetId="@id/title_panel"/>
             </targets>
         </transition>
     </transitionSet>
