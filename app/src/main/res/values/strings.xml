@@ -4,4 +4,12 @@
     <string name="app_name">Album Cover</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_album_detail">AlbumDetail</string>
+    <string name="desc_album_art">Album art</string>
+    <string name="desc_album_title">Mean Something</string>
+    <string name="desc_album_artist">Kinder Than Wolves</string>
+    <string name="desc_fab">Action button</string>
+    <string name="desc_sound_icon">Sound icon</string>
+    <string name="track_title">Make You Feel</string>
+    <string name="track_time">4:26</string>
+    <string name="desc_album_thumbnail">Album art thumbnail</string>
 </resources>

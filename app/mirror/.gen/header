@@ -1,9 +1,9 @@
 #Automatically generated header file. Editing this file may cause problems.
-#Mon Jan 04 22:11:27 PST 2016
-serverVersion=2.5.7
+#Tue Jan 05 15:51:29 PST 2016
 dexState=NO_CHANGE
+serverVersion=2.5.7
+version=9
 package=com.jimulabs.googlemusicmock
-version=8
 serverVersionCode=66
 dexManagerName=SingleDexManager
 appTheme=@style/AppTheme

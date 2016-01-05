@@ -16,15 +16,16 @@
             android:id="@+id/album_art"
             android:src="@drawable/mean_something_kinder_than_wolves"
             android:clickable="true"
-            android:transitionName="albumArt" />
+            android:transitionName="albumArt"
+            android:contentDescription="@string/desc_album_art"/>
 
         <RelativeLayout
             android:background="#31576b"
             android:layout_below="@id/album_art"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:id="@+id/title_panel"
-            android:paddingLeft="40dp"
-            android:paddingRight="20dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:layout_width="match_parent"
@@ -34,16 +35,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Mean Something"
+                android:text="@string/desc_album_title"
                 android:id="@+id/album_title" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/album_title"
-                android:layout_alignLeft="@id/album_title"
+                android:layout_alignStart="@id/album_title"
                 android:textAppearance="?android:attr/textAppearance"
-                android:text="Kinder Than Wolves"
+                android:text="@string/desc_album_artist"
                 android:id="@+id/artist" />
         </RelativeLayout>
 
@@ -55,10 +56,10 @@
             android:id="@+id/fab"
             android:transitionName="fab"
             android:layout_above="@+id/title_panel"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="-30dp"
-            android:layout_marginRight="30dp" />
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/desc_fab"/>
 
         <LinearLayout
             android:id="@+id/track_panel"
@@ -74,25 +75,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_volume_up_24dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/volume" />
+                android:layout_marginStart="20dp"
+                android:id="@+id/volume"
+                android:contentDescription="@string/desc_sound_icon"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceInverse"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Make You Feel"
+                android:text="@string/track_title"
                 android:id="@+id/track_name" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceInverse"
-                android:layout_marginRight="20dp"
-                android:text="4:26"
+                android:layout_marginEnd="20dp"
+                android:text="@string/track_time"
                 android:id="@+id/length" />
         </LinearLayout>
     </RelativeLayout>

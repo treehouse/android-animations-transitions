@@ -76,15 +76,15 @@ containing a value of this type.
         public static final int album_list=0x7f06000b;
         public static final int album_title=0x7f060004;
         public static final int artist=0x7f060005;
-        public static final int cyan_panel=0x7f060003;
         public static final int detail_container=0x7f060001;
         public static final int fab=0x7f060006;
         public static final int item_touch_helper_previous_elevation=0x7f060000;
         public static final int length=0x7f06000a;
         public static final int textView=0x7f06000c;
+        public static final int title_panel=0x7f060003;
         public static final int track_name=0x7f060009;
+        public static final int track_panel=0x7f060007;
         public static final int volume=0x7f060008;
-        public static final int white_panel=0x7f060007;
     }
     public static final class layout {
         public static final int activity_album_detail=0x7f030000;

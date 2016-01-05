@@ -24,15 +24,15 @@ int id album_art 0x7f060002
 int id album_list 0x7f06000b
 int id album_title 0x7f060004
 int id artist 0x7f060005
-int id cyan_panel 0x7f060003
 int id detail_container 0x7f060001
 int id fab 0x7f060006
 int id item_touch_helper_previous_elevation 0x7f060000
 int id length 0x7f06000a
 int id textView 0x7f06000c
+int id title_panel 0x7f060003
 int id track_name 0x7f060009
+int id track_panel 0x7f060007
 int id volume 0x7f060008
-int id white_panel 0x7f060007
 int layout activity_album_detail 0x7f030000
 int layout activity_album_list 0x7f030001
 int layout album_grid_item 0x7f030002
