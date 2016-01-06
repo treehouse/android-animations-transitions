@@ -1,5 +1,6 @@
 package com.teamtreehouse.albumcover;
 
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.ColorStateList;
@@ -36,17 +37,27 @@ public class AlbumDetailActivity extends Activity {
     }
 
     private void animate() {
-        fab.setScaleX(0);
-        fab.setScaleY(0);
-        fab.animate().scaleX(1).scaleY(1).start();
+        ObjectAnimator scalex = ObjectAnimator.ofFloat(fab, "scaleX", 0, 1);
+        ObjectAnimator scaley = ObjectAnimator.ofFloat(fab, "scaleY", 0, 1);
+        AnimatorSet scaleFab = new AnimatorSet();
+        scaleFab.playTogether(scalex, scaley);
 
         int titleStartValue = titlePanel.getTop();
         int titleEndValue = titlePanel.getBottom();
-        ObjectAnimator.ofInt(titlePanel, "bottom", titleStartValue, titleEndValue).start();
+        ObjectAnimator animatorTitle = ObjectAnimator.ofInt(titlePanel, "bottom", titleStartValue, titleEndValue);
 
         int trackStartValue = trackPanel.getTop();
         int trackEndValue = trackPanel.getBottom();
-        ObjectAnimator.ofInt(trackPanel, "bottom", trackStartValue, trackEndValue).start();
+        ObjectAnimator animatorTrack = ObjectAnimator.ofInt(trackPanel, "bottom", trackStartValue, trackEndValue);
+
+        titlePanel.setBottom(titleStartValue);
+        trackPanel.setBottom(titleStartValue);
+        fab.setScaleX(0);
+        fab.setScaleY(0);
+
+        AnimatorSet set = new AnimatorSet();
+        set.playSequentially(animatorTitle, animatorTrack, scaleFab);
+        set.start();
     }
 
     @OnClick(R.id.album_art)
