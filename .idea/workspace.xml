@@ -22,7 +22,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b828ee02-fec7-4e3d-8ca2-e84311eabcfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" />
     </list>
@@ -68,11 +67,11 @@
       <file leaf-file-name="AlbumDetailActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5821727">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.6350975">
+              <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
               <folding>
-                <element signature="e#1288#1289#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="e#1721#1722#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1899,7 +1898,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -2085,11 +2084,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5821727">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.6350975">
+          <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
           <folding>
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
           </folding>
         </state>
       </provider>

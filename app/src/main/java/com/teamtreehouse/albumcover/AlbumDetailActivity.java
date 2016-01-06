@@ -1,5 +1,6 @@
 package com.teamtreehouse.albumcover;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -38,6 +39,14 @@ public class AlbumDetailActivity extends Activity {
         fab.setScaleX(0);
         fab.setScaleY(0);
         fab.animate().scaleX(1).scaleY(1).start();
+
+        int titleStartValue = titlePanel.getTop();
+        int titleEndValue = titlePanel.getBottom();
+        ObjectAnimator.ofInt(titlePanel, "bottom", titleStartValue, titleEndValue).start();
+
+        int trackStartValue = trackPanel.getTop();
+        int trackEndValue = trackPanel.getBottom();
+        ObjectAnimator.ofInt(trackPanel, "bottom", trackStartValue, trackEndValue).start();
     }
 
     @OnClick(R.id.album_art)
