@@ -13,6 +13,7 @@ import android.support.v7.graphics.Palette;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.transition.Scene;
+import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.view.View;
@@ -21,6 +22,9 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.teamtreehouse.albumcover.transition.Fold;
+import com.teamtreehouse.albumcover.transition.Scale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -51,41 +55,36 @@ public class AlbumDetailActivity extends Activity {
         setupTransitions();
     }
 
-    private void animate() {
-//        ObjectAnimator scalex = ObjectAnimator.ofFloat(fab, "scaleX", 0, 1);
-//        ObjectAnimator scaley = ObjectAnimator.ofFloat(fab, "scaleY", 0, 1);
-//        AnimatorSet scaleFab = new AnimatorSet();
-//        scaleFab.playTogether(scalex, scaley);
-        Animator scaleFab = AnimatorInflater.loadAnimator(this, R.animator.scale);
-        scaleFab.setTarget(fab);
+    private Transition createTransition() {
+        TransitionSet set = new TransitionSet();
+        set.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);
 
-        int titleStartValue = titlePanel.getTop();
-        int titleEndValue = titlePanel.getBottom();
-        ObjectAnimator animatorTitle = ObjectAnimator.ofInt(titlePanel, "bottom", titleStartValue, titleEndValue);
-        animatorTitle.setInterpolator(new AccelerateInterpolator());
+        Transition tFab = new Scale();
+        tFab.setDuration(150);
+        tFab.addTarget(fab);
 
-        int trackStartValue = trackPanel.getTop();
-        int trackEndValue = trackPanel.getBottom();
-        ObjectAnimator animatorTrack = ObjectAnimator.ofInt(trackPanel, "bottom", trackStartValue, trackEndValue);
-        animatorTrack.setInterpolator(new DecelerateInterpolator());
+        Transition tTitle = new Fold();
+        tTitle.setDuration(150);
+        tTitle.addTarget(titlePanel);
 
-        titlePanel.setBottom(titleStartValue);
-        trackPanel.setBottom(titleStartValue);
-        fab.setScaleX(0);
-        fab.setScaleY(0);
+        Transition tTrack = new Fold();
+        tTrack.setDuration(150);
+        tTrack.addTarget(trackPanel);
 
-//        animatorTitle.setDuration(1000);
-//        animatorTrack.setDuration(1000);
-//        animatorTitle.setStartDelay(1000);
+        set.addTransition(tTitle);
+        set.addTransition(tTrack);
+        set.addTransition(tFab);
 
-        AnimatorSet set = new AnimatorSet();
-        set.playSequentially(animatorTitle, animatorTrack, scaleFab);
-        set.start();
+        return set;
     }
 
     @OnClick(R.id.album_art)
     public void onAlbumArtClick(View view) {
-        animate();
+        Transition transition = createTransition();
+        TransitionManager.beginDelayedTransition(detailContainer, transition);
+        fab.setVisibility(View.INVISIBLE);
+        titlePanel.setVisibility(View.INVISIBLE);
+        trackPanel.setVisibility(View.INVISIBLE);
     }
 
     @OnClick(R.id.track_panel)
