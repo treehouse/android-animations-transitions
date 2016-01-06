@@ -40,6 +40,7 @@ public class AlbumDetailActivity extends Activity {
     private TransitionManager mTransitionManager;
     private Scene mExpandedScene;
     private Scene mCollapsedScene;
+    private Scene mCurrentScene;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +90,13 @@ public class AlbumDetailActivity extends Activity {
 
     @OnClick(R.id.track_panel)
     public void onTrackPanelClicked(View view) {
-
+        if (mCurrentScene == mExpandedScene) {
+            mCurrentScene = mCollapsedScene;
+        }
+        else {
+            mCurrentScene = mExpandedScene;
+        }
+        mTransitionManager.transitionTo(mCurrentScene);
     }
 
     private void setupTransitions() {
@@ -105,6 +112,7 @@ public class AlbumDetailActivity extends Activity {
             public void run() {
                 ButterKnife.bind(AlbumDetailActivity.this);
                 populate();
+                mCurrentScene = mExpandedScene;
             }
         });
 
@@ -128,6 +136,7 @@ public class AlbumDetailActivity extends Activity {
             public void run() {
                 ButterKnife.bind(AlbumDetailActivity.this);
                 populate();
+                mCurrentScene = mCollapsedScene;
             }
         });
 
@@ -143,6 +152,9 @@ public class AlbumDetailActivity extends Activity {
         resetBounds.setDuration(200);
         collapseTransitionSet.addTransition(resetBounds);
 
+        mTransitionManager.setTransition(mExpandedScene, mCollapsedScene, collapseTransitionSet);
+        mTransitionManager.setTransition(mCollapsedScene, mExpandedScene, expandTransitionSet);
+        mCollapsedScene.enter();
     }
 
     private void populate() {
