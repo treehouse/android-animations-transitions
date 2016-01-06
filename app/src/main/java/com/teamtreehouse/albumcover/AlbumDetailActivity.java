@@ -10,6 +10,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.graphics.Palette;
+import android.transition.ChangeBounds;
+import android.transition.Scene;
+import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
@@ -75,6 +78,14 @@ public class AlbumDetailActivity extends Activity {
     @OnClick(R.id.album_art)
     public void onAlbumArtClick(View view) {
         animate();
+    }
+
+    @OnClick(R.id.track_panel)
+    public void onTrackPanelClicked(View view) {
+        ViewGroup transitionRoot = detailContainer;
+        Scene expandedScene = Scene.getSceneForLayout(transitionRoot,
+                R.layout.activity_album_detail_expanded, view.getContext());
+        TransitionManager.go(expandedScene, new ChangeBounds());
     }
 
     private void populate() {

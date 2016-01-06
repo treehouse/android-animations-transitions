@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/album_art"
+            android:src="@drawable/mean_something_kinder_than_wolves"
+            android:clickable="true"
+            android:transitionName="albumArt"
+            android:contentDescription="@string/desc_album_art"/>
+
+        <RelativeLayout
+            android:background="#31576b"
+            android:layout_below="@id/album_art"
+            android:layout_alignParentStart="true"
+            android:id="@+id/title_panel"
+            android:paddingStart="40dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/desc_album_title"
+                android:id="@+id/album_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/album_title"
+                android:layout_alignStart="@id/album_title"
+                android:textAppearance="?android:attr/textAppearance"
+                android:text="@string/desc_album_artist"
+                android:id="@+id/artist" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_circle"
+            android:src="@drawable/ic_pause_24dp"
+            android:id="@+id/fab"
+            android:transitionName="fab"
+            android:layout_above="@+id/title_panel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/desc_fab"/>
+
+        <LinearLayout
+            android:id="@+id/track_panel"
+            android:layout_below="@id/title_panel"
+            android:background="#eeeeee"
+            android:padding="10dp"
+            android:minHeight="80dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_volume_up_24dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/volume"
+                android:contentDescription="@string/desc_sound_icon"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceInverse"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="@string/track_title"
+                android:id="@+id/track_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceInverse"
+                android:layout_marginEnd="20dp"
+                android:text="@string/track_time"
+                android:id="@+id/length" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/track_panel"
+            android:layout_margin="15dp"
+            android:text="@string/lyrics"
+            android:textAppearance="?android:attr/textAppearanceInverse"
+            />
+    </RelativeLayout>
+
+</ScrollView>
