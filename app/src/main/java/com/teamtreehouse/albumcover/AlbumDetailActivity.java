@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -45,15 +47,21 @@ public class AlbumDetailActivity extends Activity {
         int titleStartValue = titlePanel.getTop();
         int titleEndValue = titlePanel.getBottom();
         ObjectAnimator animatorTitle = ObjectAnimator.ofInt(titlePanel, "bottom", titleStartValue, titleEndValue);
+        animatorTitle.setInterpolator(new AccelerateInterpolator());
 
         int trackStartValue = trackPanel.getTop();
         int trackEndValue = trackPanel.getBottom();
         ObjectAnimator animatorTrack = ObjectAnimator.ofInt(trackPanel, "bottom", trackStartValue, trackEndValue);
+        animatorTrack.setInterpolator(new DecelerateInterpolator());
 
         titlePanel.setBottom(titleStartValue);
         trackPanel.setBottom(titleStartValue);
         fab.setScaleX(0);
         fab.setScaleY(0);
+
+//        animatorTitle.setDuration(1000);
+//        animatorTrack.setDuration(1000);
+//        animatorTitle.setStartDelay(1000);
 
         AnimatorSet set = new AnimatorSet();
         set.playSequentially(animatorTitle, animatorTrack, scaleFab);
