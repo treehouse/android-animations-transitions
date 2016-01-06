@@ -34,9 +34,15 @@ public class AlbumDetailActivity extends Activity {
         populate();
     }
 
+    private void animate() {
+        fab.setScaleX(0);
+        fab.setScaleY(0);
+        fab.animate().scaleX(1).scaleY(1).start();
+    }
+
     @OnClick(R.id.album_art)
     public void onAlbumArtClick(View view) {
-
+        animate();
     }
 
     private void populate() {
