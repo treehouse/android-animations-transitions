@@ -87,6 +87,15 @@ public class AlbumDetailActivity extends Activity {
         ViewGroup transitionRoot = detailContainer;
         Scene expandedScene = Scene.getSceneForLayout(transitionRoot,
                 R.layout.activity_album_detail_expanded, view.getContext());
+
+        expandedScene.setEnterAction(new Runnable() {
+            @Override
+            public void run() {
+                ButterKnife.bind(AlbumDetailActivity.this);
+                populate();
+            }
+        });
+
         TransitionSet transitionSet = new TransitionSet();
         transitionSet.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);
         ChangeBounds changeBounds = new ChangeBounds();
