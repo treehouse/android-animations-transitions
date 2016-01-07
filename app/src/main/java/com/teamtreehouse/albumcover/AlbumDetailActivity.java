@@ -1,9 +1,5 @@
 package com.teamtreehouse.albumcover;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -18,13 +14,11 @@ import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.teamtreehouse.albumcover.transition.Fold;
-import com.teamtreehouse.albumcover.transition.Scale;
+import com.teamtreehouse.albumcover.transitions.Fold;
+import com.teamtreehouse.albumcover.transitions.Scale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -71,8 +65,8 @@ public class AlbumDetailActivity extends Activity {
         tTrack.setDuration(150);
         tTrack.addTarget(trackPanel);
 
-        set.addTransition(tTitle);
         set.addTransition(tTrack);
+        set.addTransition(tTitle);
         set.addTransition(tFab);
 
         return set;
