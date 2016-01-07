@@ -5,6 +5,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.graphics.Palette;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
@@ -95,8 +96,10 @@ public class AlbumDetailActivity extends Activity {
     }
 
     private void setupTransitions() {
-//        getWindow().setEnterTransition(new Slide(Gravity.RIGHT));
-//        getWindow().setReturnTransition(new Fade());
+        Slide slide = new Slide(Gravity.BOTTOM);
+        slide.excludeTarget(android.R.id.statusBarBackground, true);
+        getWindow().setEnterTransition(slide);
+        getWindow().setSharedElementsUseOverlay(false);
 
         mTransitionManager = new TransitionManager();
         ViewGroup transitionRoot = detailContainer;
@@ -153,6 +156,8 @@ public class AlbumDetailActivity extends Activity {
         mTransitionManager.setTransition(mExpandedScene, mCollapsedScene, collapseTransitionSet);
         mTransitionManager.setTransition(mCollapsedScene, mExpandedScene, expandTransitionSet);
         mCollapsedScene.enter();
+
+        postponeEnterTransition();
     }
 
     private void populate() {

@@ -24,7 +24,7 @@
     <list default="true" id="b828ee02-fec7-4e3d-8ca2-e84311eabcfb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml" />
     </list>
     <ignored path="android-animations-transitions.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +55,8 @@
       <file leaf-file-name="activity_album_detail.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6666667">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -91,16 +91,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlbumDetailActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AlbumDetailActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.24408014">
+              <caret line="167" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
-                <element signature="e#3400#3630#0" expanded="true" />
-                <element signature="e#3629#3630#0" expanded="true" />
-                <element signature="e#4290#4521#0" expanded="true" />
-                <element signature="e#4520#4521#0" expanded="true" />
+                <element signature="e#3525#3755#0" expanded="true" />
+                <element signature="e#3754#3755#0" expanded="true" />
+                <element signature="e#4415#4646#0" expanded="true" />
+                <element signature="e#4645#4646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlbumListActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlbumListActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31754875">
-              <caret line="83" column="79" selection-start-line="83" selection-start-column="79" selection-end-line="83" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1732,15 +1732,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/album_grid_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_album_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/animator/scale.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail_expanded.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/transitions/Fold.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/transitions/Scale.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java" />
       </list>
     </option>
   </component>
@@ -2200,7 +2200,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2266,10 +2266,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3400#3630#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-            <element signature="e#4290#4521#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
+            <element signature="e#3525#3755#0" expanded="true" />
+            <element signature="e#3754#3755#0" expanded="true" />
+            <element signature="e#4415#4646#0" expanded="true" />
+            <element signature="e#4645#4646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2382,30 +2382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
-          <folding>
-            <element signature="e#3400#3630#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-            <element signature="e#4290#4521#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/album_grid_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -2419,9 +2395,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31754875">
-          <caret line="83" column="79" selection-start-line="83" selection-start-column="79" selection-end-line="83" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_album_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/albumcover/AlbumDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24408014">
+          <caret line="167" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding>
+            <element signature="e#3525#3755#0" expanded="true" />
+            <element signature="e#3754#3755#0" expanded="true" />
+            <element signature="e#4415#4646#0" expanded="true" />
+            <element signature="e#4645#4646#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
