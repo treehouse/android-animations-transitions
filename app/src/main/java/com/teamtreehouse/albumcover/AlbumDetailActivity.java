@@ -96,6 +96,8 @@ public class AlbumDetailActivity extends Activity {
 
     private void setupTransitions() {
         getWindow().setEnterTransition(new Slide(Gravity.RIGHT));
+        getWindow().setReturnTransition(new Fade());
+
         mTransitionManager = new TransitionManager();
         ViewGroup transitionRoot = detailContainer;
 
