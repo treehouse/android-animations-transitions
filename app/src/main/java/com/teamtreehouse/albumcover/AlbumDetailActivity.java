@@ -96,10 +96,10 @@ public class AlbumDetailActivity extends Activity {
     }
 
     private void setupTransitions() {
-        Slide slide = new Slide(Gravity.BOTTOM);
-        slide.excludeTarget(android.R.id.statusBarBackground, true);
-        getWindow().setEnterTransition(slide);
-        getWindow().setSharedElementsUseOverlay(false);
+//        Slide slide = new Slide(Gravity.BOTTOM);
+//        slide.excludeTarget(android.R.id.statusBarBackground, true);
+//        getWindow().setEnterTransition(slide);
+//        getWindow().setSharedElementsUseOverlay(false);
 
         mTransitionManager = new TransitionManager();
         ViewGroup transitionRoot = detailContainer;
@@ -157,7 +157,7 @@ public class AlbumDetailActivity extends Activity {
         mTransitionManager.setTransition(mCollapsedScene, mExpandedScene, expandTransitionSet);
         mCollapsedScene.enter();
 
-        postponeEnterTransition();
+//        postponeEnterTransition();
     }
 
     private void populate() {
@@ -195,6 +195,6 @@ public class AlbumDetailActivity extends Activity {
                 palette.getVibrantColor(defaultFabColor),
                 palette.getLightVibrantColor(defaultFabColor)
         };
-        fab.setBackgroundTintList(new ColorStateList(states, colors));
+//        fab.setBackgroundTintList(new ColorStateList(states, colors));
     }
 }
