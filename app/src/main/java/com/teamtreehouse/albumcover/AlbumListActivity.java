@@ -30,7 +30,7 @@ public class AlbumListActivity extends Activity {
     }
 
     private void setupTransitions() {
-        getWindow().setExitTransition(new Explode());
+//        getWindow().setExitTransition(new Explode());
     }
 
     interface OnVHClickedListener {
@@ -81,7 +81,7 @@ public class AlbumListActivity extends Activity {
                         intent.putExtra(AlbumDetailActivity.EXTRA_ALBUM_ART_RESID, albumArtResId);
 
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
-                                AlbumListActivity.this);
+                                AlbumListActivity.this, vh.albumArt, "albumArt");
                         startActivity(intent, options.toBundle());
                     }
                 });
